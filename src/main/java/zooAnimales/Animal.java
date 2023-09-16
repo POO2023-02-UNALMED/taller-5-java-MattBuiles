@@ -24,7 +24,7 @@ public class Animal {
     else return "desplazarse";
   }
   public static String totalPorTipo(){return "Mamiferos: "+Mamifero.cantidadMamiferos()+"\n" + "Aves: "+Ave.cantidadAves()+"\n" + "Reptiles: "+Reptil.cantidadReptiles()+"\n" + "Peces: "+Pez.cantidadPeces()+"\n" + "Anfibios: "+Anfibio.cantidadAnfibios();}
-  public String toString(){return "Mi nombre es "+this.nombre+"nombre, tengo una edad de " +this.edad+"edad, habito en "+this.habitat+"habitat y mi genero es "+this.genero+"genero";}
+  public String toString(){return "Mi nombre es "+this.nombre+", tengo una edad de " +this.edad+", habito en "+this.habitat+" y mi genero es "+this.genero;}
   public String getHabitat() {return this.habitat;}
   public void setHabitat(String a) {this.habitat=a;}
   public String getNombre() {return this.nombre;}

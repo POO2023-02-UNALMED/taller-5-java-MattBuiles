@@ -7,10 +7,11 @@ public class Anfibio extends Animal{
   public static int salamandras;
   private String colorPiel;
   private boolean venenoso;
-  public Anfibio(){}
+  public Anfibio(){totalAnimales++;list.add(this);}
   public Anfibio(String nombre,int edad, String habitat,String genero, String colorPiel,boolean venenoso){super.setNombre(nombre);
     super.setEdad(edad);
     super.setHabitat(habitat);
+    super.setGenero(genero);
     this.colorPiel=colorPiel;
     this.venenoso=venenoso;
     list.add(this);

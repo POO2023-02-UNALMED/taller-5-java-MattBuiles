@@ -6,11 +6,12 @@ public class Ave extends Animal{
   public static int halcones;
   public static int aguilas;
   private String colorPlumas;
-  public Ave(){}
+  public Ave(){totalAnimales++;list.add(this);}
   public Ave(String nombre,int edad, String habitat,String genero, String colorPlumas){
     super.setNombre(nombre);
     super.setEdad(edad);
     super.setHabitat(habitat);
+    super.setGenero(genero);
     this.colorPlumas = colorPlumas;
     list.add(this);
     totalAnimales++;
