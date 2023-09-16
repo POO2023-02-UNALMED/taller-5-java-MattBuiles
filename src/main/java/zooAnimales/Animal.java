@@ -1,5 +1,6 @@
 package zooAnimales;
 import gestion.Zona;
+import java.util.*;
 public class Animal {
   int totalAnimales;
   private String nombre;
@@ -15,9 +16,15 @@ public class Animal {
     this.genero=genero;
     totalAnimales++;
   }
-  public void movimiento(){}
-  public String totalPorTipo(){return "";}
-  public String toString(){return "Mi nombre es "+this.nombre+"nombre, tengo una edad de " +this.edad+"edad, habito en "+this.habitat+"habitat y mi genero es "+this.genero+"genero, la zona en la que me ubico es "+this.zona+"zona, en el "+this.zona[].getZoo()+"zoo";}
+  public String movimiento(){
+    if(this instanceof Anfibio){return "saltar";}
+    else if(this instanceof Ave){return "volar";}
+    else if(this instanceof Reptil){return "reptar";}
+    else if(this instanceof Pez){return "nadar";}
+    else return "desplazarse";
+  }
+  public static String totalPorTipo(){return "Mamiferos: "+Mamifero.cantidadMamiferos()+"\n" + "Aves: "+Ave.cantidadAves()+"\n" + "Reptiles: "+Reptil.cantidadReptiles()+"\n" + "Peces: "+Pez.cantidadPeces()+"\n" + "Anfibios: "+Anfibio.cantidadAnfibios();}
+  public String toString(){return "Mi nombre es "+this.nombre+"nombre, tengo una edad de " +this.edad+"edad, habito en "+this.habitat+"habitat y mi genero es "+this.genero+"genero";}
   public String getHabitat() {return this.habitat;}
   public void setHabitat(String a) {this.habitat=a;}
   public String getNombre() {return this.nombre;}
