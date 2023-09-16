@@ -27,4 +27,6 @@ public class Reptil extends Animal{
     serpientes++;
     return new Reptil(nombre,edad,"jungla",genero, "blanco",1);
   }
+  public String getColorEscamas(){return colorEscamas;}
+  public int getLargoCola(){return largoCola;}
 }

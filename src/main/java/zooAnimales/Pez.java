@@ -4,7 +4,7 @@ public class Pez extends Animal{
   private List<Pez> list = new ArrayList<Pez>();
   private static Pez[] listado;
   public static int salmones;
-  public static int balcalaos;
+  public static int bacalaos;
   private String colorEscamas;
   private int cantidadAletas;
   public Pez(){}
@@ -24,7 +24,9 @@ public class Pez extends Animal{
     return new Pez(nombre,edad,"oceano",genero, "rojo",6);
   }
   public static Pez crearBacalao(String nombre,int edad, String genero){
-    balcalaos++;
+    bacalaos++;
     return new Pez(nombre,edad,"oceano",genero, "gris",6);
   }
+  public String getColorEscamas(){return colorEscamas;}
+  public int getCantidadAletas(){return cantidadAletas;}
 }
