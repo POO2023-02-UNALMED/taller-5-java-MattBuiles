@@ -1,5 +1,4 @@
 package gestion;
-import zooAnimales.Anfibio;
 import zooAnimales.Animal;
 import java.util.*;
 public class Zona {
@@ -14,10 +13,9 @@ public class Zona {
   }
   public void agregarAnimales(Animal animal) {
     list.add(animal);
-    list.toArray(animales);
   }
-  public int cantidadAnimales() {return animales.length;}
-  public Animal[] getAnimales() {return animales;}
+  public int cantidadAnimales() {return list.size();}
+  public List<Animal> getAnimales() {return list;}
   public String getNombre(){return nombre;}
   public Zoologico getZoo(){return zoo;}
 }
